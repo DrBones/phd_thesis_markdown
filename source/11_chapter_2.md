@@ -16,4 +16,4 @@ Hence, there exists *no BEC* in a homogenous 2D system for any finite temperatur
 
 Again, investigating the phase of the order parameter, one can show that in an infinite 2D system a continuous symmetry can not be spontaneously broken. This means that for any distance r → ∞, the correlation function g~1~(r) ∝ exp(-r/l~c~) vanishes exponentially for any correlation length l~c~(T≢0). This has been shown for the 2D Heisenberg model by Mermin and Wagner [@Mermin1966], applied to 2D quantum field theory [@Coleman1973] and rigorously proven for any 2D system by Hohenberg [@Hohenberg1967]. Thus, this gas does exhibit *no long range order*.
 
-A qualitatively different behavior occurs if the particles of the 2D Bose gas are interacting with each other. Now, the correlation function g~1~ does not decay exponentially but only algebraically g~1~(r) ∝ (ξ/r)^α^
+A qualitatively different behavior occurs if the particles of the 2D Bose gas are interacting with each other. Now, the correlation function g~1~(r) does not decay exponentially but only algebraically g~1~(r) ∝ (ξ/r)^α^.
