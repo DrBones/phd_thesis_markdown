@@ -1,18 +1,18 @@
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
-$if(fontfamily)$
-\usepackage{$fontfamily$}
-$else$
-\usepackage{lmodern}
-$endif$
-
+% $if(fontfamily)$
+% \usepackage{$fontfamily$}
+% $else$
+% % \usepackage{lmodern}
+% $endif$
+%
 % Overwrite \begin{figure}[htbp] with \begin{figure}[H]
 \usepackage{float}
 \let\origfigure=\figure
 \let\endorigfigure=\endfigure
 \renewenvironment{figure}[1][]{%
-\origfigure[b]
+  \origfigure[b]
 }{%
-\endorigfigure
+  \endorigfigure
 }
 
 % fix for pandoc 1.14
@@ -26,36 +26,33 @@ $endif$
 % TP: end hack
 
 $if(linestretch)$
-\usepackage{setspace}
-\setstretch{$linestretch$}
+  \usepackage{setspace}
+  \setstretch{$linestretch$}
 $endif$
 \usepackage{amssymb,amsmath}
-\usepackage{ifxetex,ifluatex}
-% \usepackage{fixltx2e} % provides \textsubscript
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-$if(euro)$
-  \usepackage{eurosym}
-$endif$
-\else % if luatex or xelatex
-  \usepackage{fontspec}
-  \usepackage{unicode-math}
-  \setmainfont
-  [    Extension = .otf,
-     UprightFont = *-regular,
-        BoldFont = *-bold,
-      ItalicFont = *-italic,
-  BoldItalicFont = *-bolditalic,
-  ]{xits}
-  \setmathfont
-  [    Extension = .otf,
-        BoldFont = *bold,
-  ]{xits-math}
+% $if(euro)$
+%   \usepackage{eurosym}
+% $endif$
+\usepackage{fontspec}
+\usepackage{unicode-math}
+
+\setmainfont{TeX Gyre Pagella}
+% \setmathfont[Scale=MatchLowercase]{TeX Gyre Pagella Math}
+\setmathfont[Scale=MatchLowercase]{Asana Math}
+  % \setmainfont
+  % [    Extension = .otf,
+  %    UprightFont = *-regular,
+  %       BoldFont = *-bold,
+  %     ItalicFont = *-italic,
+  % BoldItalicFont = *-bolditalic,
+  % ]{xits}
+  % \setmathfont
+  % [    Extension = .otf,
+  %       BoldFont = *bold,
+  % ]{xits-math}
     % \usepackage{xltxtra,xunicode}
-  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
-  \newcommand{\euro}{€}
-\fi
+% \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  % \newcommand{\euro}{€}
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
