@@ -1,6 +1,4 @@
-Here will be some nice teaser with a picture of our gas or so.
-
-## Superfluidity in strongly interacting 2D Bose gases.
+# Superfluidity in strongly interacting 2D Bose gases.
 
 This work focusses on the study of ultra cold strongly correlated 2D gases, their phase coherence properties and the possibility of superfluidity. Unfortunately, for the most prominent phase of superfluidity, a Bose Einstein condensate (BEC), higher dimensions are necessary and 2D is the marginal dimension for its existence (xx). Hence, it is instructive to consider ultra cold 3D gases first, where the concepts of condensation and superfluidity are much easier understood. The line of reasoning will loosely follow the excellent review of Hadzibabic and Dalibard @Dalibard.
 
@@ -22,3 +20,28 @@ Surprisingly, this gas is superfluid. In fact, the occurrence of a superfluid de
 Interestingly, an unusual phase transition accompanies the change from exponential to algebraic decay of phase correlations. It is special in the sense that the change from a high temperature normal state to a low temperature superfluid state can not involve any spontaneous symmetry breaking. This transition is explained by the theory of Berezinskii @Berezinskii1971a, Kosterlitz and Thouless @Kosterlitz2002 This quantum phase transition revolves around another source of phase fluctuation, vortices. As will be shown later, the binding of vortices of opposite charge defines the transition from a normal fluid to a superfluid.
 
 In the following, these points will be describes in more detail. Starting with the comparison of infinite homogeneous 3D and 2D gases and then introducing interactions. Concluding, the 2D case will be examined in the presence of a trapping potential and some finite size effects will be discussed.
+
+##
+
+
+
+Table \ref{ref_a_table} shows us how to add a table.
+
+<!-- Force the table onto a newpage -->
+
+<!-- \newpage -->
+
+-----------------------------------------
+Ideal 3D Gas            Ideal 2D Gas                
+--------------      -------------------    
+Row 1               0.1    
+
+Row 2               0.3    
+
+Row 3               0.4          
+
+Row 4               0.5    
+
+------------------------------------------
+
+Table: Comparison of Coherence and superfluidity in different 3D/2D gases . \label{ref_a_table}
