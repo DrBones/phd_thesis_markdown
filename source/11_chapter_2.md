@@ -23,11 +23,33 @@ In the following, these points will be describes in more detail. Starting with t
 
 ## The Ideal 3D Gas
 
-f(E~p~, T, N) $f(E_p, T, N)$
+Interestingly in the framework of classical statistical mechanics, a grand canonical ensemble can be used to describe many important properties of a cold atom gas. From this, given the inverse temperature $β=1/k_B T$ and the chemical potential $μ$ the average occupancy of a single particle state $ν$ with energy $ϵ$ can be derived as:
 
-$$
-    \frac{l_z}{a_{3D}} = \int_0^\infty  \frac{du}{4\pi u^3} \left( 1 - \frac{2ue^{-uE_B^{2D}}/\hbar \omega}{1-e^{-2u}} \right)
-$$
+$$ f(ϵ_ν) = (ⅇ^{β(ϵ_ν-μ)}±γ)^{-1} \quad\quad μ=\frac{∂E}{∂N} $$ {#eq:meanoccupation}
+
+With $γ$ depending on the nature of the distribution the particles
+
+\begin{align}
+γ =& +1       : \text{Fermi-Dirac}\\
+γ =&\quad\, 0 : \text{Maxwell-Boltzmann}\\
+γ =& -1       : \text{Bose-Einstein}
+\end{align}
+
+Note, since $ϵ ≥ 0$ when the single particle spectrum starts at $ϵ_0 = 0$ and the occupation is per defintion positive one immediately requires $-∞ ≤ μ ≤ 0$ for the Bose-Einstein distribution. For the other distributions, the chemical potential can take on either sign.
+![Mean Occupancy](/Volumes/Data/Jonas/Documents/latex/phd_thesis_markdown/images/2016/07/MeanOccupancy.png)
+From this, basic properties of the gas can be calculated. Like the mean energy $E$
+
+$$ E = ∑_ν ϵ_ν f(ϵ_ν)$$ {#eq:meanenergy}
+
+or the mean particle number
+
+$$ N = ∑_ν f(ϵ_ν)$$ {#eq:meanparticlenumber}
+
+If the temperature of the system is sufficiently high or the size is sufficiently large, the spacing of the single-particle energy levels becomes small enough to replace the sum over discrete states by an integral over the energy weighted by the density of states $g(ϵ)$. Hence, the particle number - for example -- can be written like
+
+$$ N = ∑_ν f(ϵ_ν) ≈ ∫_0^∞ f(ϵ) g(ϵ) \text{d}ϵ $$
+
+
 
 Table \ref{ref_a_table} shows us how to add a table.
 
