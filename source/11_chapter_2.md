@@ -23,11 +23,11 @@ In the following, these points will be describes in more detail. Starting with t
 
 ## The Ideal 3D Gas
 
-Interestingly in the framework of classical statistical mechanics, a grand canonical ensemble can be used to describe many important properties of a cold atom gas. From this, given the inverse temperature $β=1/k_B T$ and the chemical potential $μ$ the average occupancy of a single particle state $ν$ with energy $ϵ$ can be derived as:
+Interestingly the framework of classical statistical mechanics with the use of a grand canonical ensemble describes many important properties of a cold atom gas. From this, given the inverse temperature $β=(k_B T)^{-1}$ and the chemical potential $μ$ the average occupancy of a single particle state $ν$ with energy $ϵ$ can be derived as:
 
-$$ f(ϵ_ν) = (ⅇ^{β(ϵ_ν-μ)}±γ)^{-1} \quad\quad μ=\frac{∂E}{∂N} $$ {#eq:meanoccupation}
+$$ f(ϵ_ν) = (ⅇ^{β(ϵ_ν-μ)}±γ)^{-1} \quad\quad μ=\left(\frac{∂E}{∂N}\right)_{S,V} $$ {#eq:meanoccupation}
 
-With $γ$ depending on the nature of the distribution the particles
+Here, the chemical potential has to be evaluated at constant entropy $S$ and volume $V$. The constant $γ$ describes the nature of the distribution the particles
 
 \begin{align}
 γ =& +1       : \text{Fermi-Dirac}\\
@@ -35,15 +35,17 @@ With $γ$ depending on the nature of the distribution the particles
 γ =& -1       : \text{Bose-Einstein}
 \end{align}
 
-Note, since $ϵ ≥ 0$ when the single particle spectrum starts at $ϵ_0 = 0$ and the occupation is per defintion positive one immediately requires $-∞ ≤ μ ≤ 0$ for the Bose-Einstein distribution. For the other distributions, the chemical potential can take on either sign.
-![Mean Occupancy](/Volumes/Data/Jonas/Documents/latex/phd_thesis_markdown/images/2016/07/MeanOccupancy.png)
+Note, since $ϵ ≥ 0$ when the single particle spectrum starts at $ϵ_0 = 0$ and the occupation is per defintion positive one immediately requires $-∞ ≤μ ≤ 0$ for the Bose-Einstein distribution. For the other distributions, the chemical potential can take on either sign. In @Fig:meanoccupancy the different behaviours of the distributions for small $β(ϵ_ν-μ)$ are shown.
+
+![Mean Occupancy](/Volumes/Data/Jonas/Documents/latex/phd_thesis_markdown/images/2016/07/MeanOccupancy.png){#fig:meanoccupancy}
+
 From this, basic properties of the gas can be calculated. Like the mean energy $E$
 
-$$ E = ∑_ν ϵ_ν f(ϵ_ν)$$ {#eq:meanenergy}
+$$ E = ∑_ν ϵ_ν f(ϵ_ν),$$ {#eq:meanenergy}
 
 or the mean particle number
 
-$$ N = ∑_ν f(ϵ_ν)$$ {#eq:meanparticlenumber}
+$$ N = ∑_ν f(ϵ_ν).$$ {#eq:meanparticlenumber}
 
 If the temperature of the system is sufficiently high or the size is sufficiently large, the spacing of the single-particle energy levels becomes small enough to replace the sum over discrete states by an integral over the energy weighted by the density of states $g(ϵ)$. Hence, the particle number - for example -- can be written like
 
