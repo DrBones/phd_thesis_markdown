@@ -27,9 +27,12 @@ help:
 pdf:
 	pandoc "$(INPUTDIR)"/*.md \
 	-o "$(OUTPUTDIR)/thesis.pdf" \
-	-H "$(STYLEDIR)/preamble.tex" \
+	--include-in-header "$(STYLEDIR)/preamble.tex" \
 	--template="$(STYLEDIR)/template.tex" \
-	--bibliography="$(BIBFILE)" 2>pandoc.log \
+	--filter pandoc-crossref \
+	--metadata bibliography="$(BIBFILE)" 2>pandoc.log \
+	-M autoEqnLabels \
+	--filter pandoc-citeproc \
 	--csl="$(STYLEDIR)/ref_format.csl" \
 	--highlight-style pygments \
 	-V fontsize=12pt \
@@ -63,7 +66,9 @@ html:
 	-o "$(OUTPUTDIR)/thesis.html" \
 	--standalone \
 	--template="$(STYLEDIR)/template.html" \
-	--bibliography="$(BIBFILE)" \
+	--filter pandoc-crossref \
+	--metadata bibliography="$(BIBFILE)" \
+	--filter pandoc-citeproc \
 	--csl="$(STYLEDIR)/ref_format.csl" \
 	--include-in-header="$(STYLEDIR)/style.css" \
 	--toc \
